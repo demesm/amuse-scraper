@@ -1,5 +1,7 @@
 # Amuse.io Collection Scraper
 
+![Amuse Scraper Icon](icon48.png)
+
 **☕ If this tool helps you recover your music metadata, consider [buying me a coffee](https://ko-fi.com/sdemi) to support development! ☕**
 
 This Chrome extension scrapes collection data from Amuse.io. I like many others have been burned by amuse, so this lets you yoink all the metadata needed to move your songs to another distributor.
