@@ -14,12 +14,12 @@ This Chrome extension scrapes collection data from Amuse.io. I like many others 
 - **Cover Art Download**: Automatically downloads high-resolution cover art images
 
 ## Installation
-
-1. Open Chrome and navigate to `chrome://extensions/`
-2. Enable "Developer mode" (toggle in the top right corner)
-3. Click "Load unpacked"
-4. Select the `amuse-scraper-extension` folder
-5. The extension should now appear in your extensions list
+1. Download and extract amuse-scraper.zip
+2. Open Chrome and navigate to `chrome://extensions/`
+3. Enable "Developer mode" (toggle in the top right corner)
+4. Click "Load unpacked"
+5. Select the `amuse-scraper` folder
+6. The extension should now appear in your extensions list
 
 ## How to Use
 
