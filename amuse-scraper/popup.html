@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <style>
+    body {
+      width: 400px;
+      min-height: 300px;
+      padding: 15px;
+      font-family: Arial, sans-serif;
+    }
+    h1 {
+      font-size: 18px;
+      margin-bottom: 10px;
+    }
+    .status {
+      margin-bottom: 15px;
+      padding: 10px;
+      background-color: #f0f0f0;
+      border-radius: 4px;
+    }
+    .data-summary {
+      margin-bottom: 15px;
+    }
+    button {
+      padding: 8px 15px;
+      margin-right: 10px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #45a049;
+    }
+    button:disabled {
+      background-color: #cccccc;
+      cursor: not-allowed;
+    }
+    .warning {
+      color: #ff6600;
+      font-size: 12px;
+      margin-top: 10px;
+    }
+    #dataPreview {
+      max-height: 200px;
+      overflow-y: auto;
+      border: 1px solid #ddd;
+      padding: 10px;
+      margin-top: 10px;
+      font-size: 12px;
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <h1>Amuse Studio Scraper</h1>
+  
+  <div class="status">
+    <div id="statusText">Ready to start scraping</div>
+    <div id="progress"></div>
+  </div>
+  
+  <div class="data-summary">
+    <div id="linkCount">Collection links found: 0</div>
+    <div id="dataCount">Collections scraped: 0</div>
+  </div>
+  
+  <div>
+    <button id="startBtn">Start Scraping</button>
+    <button id="exportBtn" disabled>Export Data</button>
+    <button id="loadBtn">Load JSON</button>
+    <button id="clearBtn">Clear Data</button>
+  </div>
+  
+  <input type="file" id="fileInput" accept=".json" style="display: none;">
+  
+  <p class="warning">
+    Note: Navigate to https://artist.amuse.io/studio/ and click "Start Scraping" to begin.
+  </p>
+  
+  <div id="dataPreview"></div>
+  
+  <script src="popup.js"></script>
+</body>
+</html>
