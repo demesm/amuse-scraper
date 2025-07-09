@@ -277,6 +277,7 @@ document.addEventListener('DOMContentLoaded', function() {
                         <strong>Genre:</strong> ${collection.genre || 'Unknown'} | 
                         <strong>UPC:</strong> ${collection.upc || 'N/A'} | 
                         <strong>Release ID:</strong> ${collection.releaseId || 'N/A'} | 
+                        <strong>Release Date:</strong> ${collection.releaseDate || 'N/A'} | 
                         <strong>Songs:</strong> ${songCount}
                     </div>
                 </div>

@@ -281,9 +281,15 @@ function extractCollectionData() {
     const releaseIdMatch = allText.match(/Release ID[:\s]+(\w+)/i);
     collectionData.releaseId = releaseIdMatch ? releaseIdMatch[1] : null;
     
-    // Extract release date (collection-level)
-    const releaseDateMatch = allText.match(/Release Date[:\s]+([^\n]+)/i);
-    collectionData.releaseDate = releaseDateMatch ? releaseDateMatch[1].trim() : null;
+    // Extract release date (collection-level) from the date attribute
+    const releaseDateElement = document.querySelector('span[data-path="release_timeline_info_received"]');
+    if (releaseDateElement && releaseDateElement.getAttribute('date')) {
+      collectionData.releaseDate = releaseDateElement.getAttribute('date');
+    } else {
+      // Fallback to text matching if element not found
+      const releaseDateMatch = allText.match(/Release Date[:\s]+([^\n]+)/i);
+      collectionData.releaseDate = releaseDateMatch ? releaseDateMatch[1].trim() : null;
+    }
     
     // Extract cover art (collection-level)
     const coverArtSelectors = [
